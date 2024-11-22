@@ -1,0 +1,232 @@
+/* Root Variables */
+:root {
+    --primary-color: #0b3954;
+    --secondary-color: #1c7293;
+    --accent-color: #ffcb47;
+    --background-gradient: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    --text-color: #333;
+}
+
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    color: var(--text-color);
+    background: var(--background-gradient);
+    line-height: 1.6;
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    animation: slideDown 1s ease-in-out;
+}
+
+.download-btn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.contact-item {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-item:hover {
+    color: var(--accent-color);
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-category {
+    background: #f7fafc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skill-category h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background: #f7fafc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Education Grid */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.education-item {
+    background: #f7fafc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+/* Experience Section */
+.experience-item {
+    margin-bottom: 1.5rem;
+}
+
+.job-title {
+    color: var(--accent-color);
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .resume-container {
+        padding: 1rem;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .skills-grid, .project-grid, .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
