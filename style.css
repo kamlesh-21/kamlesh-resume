@@ -34,29 +34,6 @@ body {
     margin-bottom: 2rem;
 }
 
-.name {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    animation: slideDown 1s ease-in-out;
-}
-
-.download-btn {
-    padding: 0.7rem 1.5rem;
-    border: none;
-    background: var(--accent-color);
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.download-btn:hover {
-    background: var(--secondary-color);
-}
-
 /* Contact Info */
 .contact-info {
     display: flex;
@@ -229,4 +206,27 @@ footer {
     .skills-grid, .project-grid, .education-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    animation: slideDown 1s ease-in-out;
+}
+
+.download-btn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: var(--secondary-color);
 }
