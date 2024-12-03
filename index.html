@@ -214,11 +214,21 @@
         </main>
     </div>
     <footer>
-        <p class="text-gray-600">© 2024 Kamlesh Kumar | Built with ❤️ & Modern Web Technologies</p>
+        <p class="text-gray-600">© 2024 Kamlesh Kumar | Built for speed with Simple HTML, CSS</p>
     </footer>
     <script>
         function downloadResume() {
-            alert("Feature Coming Soon!");
+            // Create a link element
+            const link = document.createElement('a');
+            
+            // Set the link's href to the path of the resume file
+            link.href = 'assets/Kamlesh_Kumar_Resume.pdf'; // Adjust the path if necessary
+            
+            // Set the download attribute to specify the filename
+            link.download = 'Kamlesh_Kumar_Resume.pdf';
+            
+            // Programmatically click the link to trigger the download
+            link.click();
         }
     </script>
 </body>
